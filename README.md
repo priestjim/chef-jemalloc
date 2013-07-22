@@ -12,7 +12,7 @@ Requirements
 Platform
 --------
 
-The following platforms are supported and tested under test kitchen:
+The following platforms are supported and tested using Vagrant:
 
 * Ubuntu 12.04, 12.10
 * CentOS 6
