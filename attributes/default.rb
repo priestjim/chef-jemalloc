@@ -3,13 +3,13 @@
 # Attribute:: default
 #
 # Copyright (C) 2013 Panagiotis Papadomitsos
-# 
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #    http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 
-default['jemalloc']['version']                = '3.4.0'
+default['jemalloc']['version']                = '3.4.1'
 default['jemalloc']['url']                    = "http://www.canonware.com/download/jemalloc/jemalloc-#{node['jemalloc']['version']}.tar.bz2"
-default['jemalloc']['checksum']               = 'f60802c4c2c60bc24598fd052494aea96f4426f3d4decd832eadeed520ff81c0'
+default['jemalloc']['checksum']               = '7341953fe9f21342b005b6c7e798631678ae713293a64d5fa61dea7449fc10fb'
 
 # Configure options
 default['jemalloc']['configure']['munmap']    = true
