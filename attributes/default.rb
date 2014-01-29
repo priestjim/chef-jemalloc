@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 
-default['jemalloc']['version']                = '3.4.1'
+default['jemalloc']['version']                = '3.5.0'
 default['jemalloc']['url']                    = "http://www.canonware.com/download/jemalloc/jemalloc-#{node['jemalloc']['version']}.tar.bz2"
-default['jemalloc']['checksum']               = '7341953fe9f21342b005b6c7e798631678ae713293a64d5fa61dea7449fc10fb'
+default['jemalloc']['checksum']               = '5b13dbef27c46e9efbe19b5eef574e298409ed9dbbde85ec805e29d04c05e473'
 
 # Configure options
 default['jemalloc']['configure']['munmap']    = true
