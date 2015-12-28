@@ -52,13 +52,13 @@ bash 'compile-jemalloc' do
   #{'--disable-valgrind' unless node['jemalloc']['configure']['valgrind']} &&
   make
   EOH
-  not_if { ::File.exists?("#{jem_path}/lib/libjemalloc.so.1")}
+  not_if { ::File.exists?("#{jem_path}/lib/libjemalloc.so.2")}
 end
 
 execute 'install-jemalloc' do
   command 'make install'
   cwd jem_path
-  not_if { ::FileUtils.cmp("#{jem_path}/lib/libjemalloc.so.1", "#{jem_libdir}/libjemalloc.so.1") rescue false }
+  not_if { ::FileUtils.cmp("#{jem_path}/lib/libjemalloc.so.2", "#{jem_libdir}/libjemalloc.so.2") rescue false }
   action :run
   notifies :run, 'execute[jemalloc-ldconfig]'
 end
