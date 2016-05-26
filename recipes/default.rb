@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe 'build-essential'
+
 jem_filename = ::File.basename(node['jemalloc']['url'])
 jem_path = "#{Chef::Config['file_cache_path'] || '/tmp'}/jemalloc-#{node['jemalloc']['version']}"
 jem_libdir = (platform_family?('rhel') && node['kernel']['machine'].eql?('x86_64')) ? '/usr/lib64' : '/usr/lib'
