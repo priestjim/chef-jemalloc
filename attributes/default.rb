@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 
-default['jemalloc']['version']                = '4.0.4'
+default['jemalloc']['version']                = '4.4.0'
 default['jemalloc']['url']                    = "https://github.com/jemalloc/jemalloc/releases/download/#{node['jemalloc']['version']}/jemalloc-#{node['jemalloc']['version']}.tar.bz2"
-default['jemalloc']['checksum']               = '3fda8d8d7fcd041aa0bebbecd45c46b28873cf37bd36c56bf44961b36d0f42d0'
+default['jemalloc']['checksum']               = 'a7aea63e9718d2f1adf81d87e3df3cb1b58deb86fc77bad5d702c4c59687b033'
 
 # Configure options
 default['jemalloc']['configure']['munmap']    = true

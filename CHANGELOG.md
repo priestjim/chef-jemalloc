@@ -1,3 +1,7 @@
+## 0.1.4:
+
+* Bump jemalloc version
+
 ## 0.1.3:
 
 * Add dependency to build-essential
