@@ -1,3 +1,7 @@
+## 0.1.5:
+
+* Bump jemalloc version
+
 ## 0.1.4:
 
 * Bump jemalloc version
