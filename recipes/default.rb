@@ -45,7 +45,6 @@ bash 'compile-jemalloc' do
   code <<-EOH
   ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-debug \\
   #{'--enable-lazy-lock' if node['jemalloc']['configure']['lazy_lock']} \\
-  #{'--enable-munmap' if node['jemalloc']['configure']['munmap']} \\
   #{'--enable-xmalloc' if node['jemalloc']['configure']['xmalloc']} \\
   #{'--enable-dss' if node['jemalloc']['configure']['dss']} \\
   #{'--enable-mremap' if node['jemalloc']['configure']['mremap']} \\

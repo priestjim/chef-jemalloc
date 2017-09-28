@@ -35,7 +35,6 @@ The following attributes are available on this cookbook:
 
 In addition, the following configuration flags are available as switches
 
-* `node['jemalloc']['configure']['munmap']` - Enables the `munmap` feature of jemalloc
 * `node['jemalloc']['configure']['lazy_lock']` - Enables lazy locking (locking on multi-threaded applications only)
 * `node['jemalloc']['configure']['xmalloc']` - Enables the `xmalloc` feature of jemalloc
 * `node['jemalloc']['configure']['dss']` - Enables `sbrk` along `mmap` for memory allocations
