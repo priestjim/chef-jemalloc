@@ -1,31 +1,28 @@
-Description
-===========
+# jemalloc Chef Cookbook
+
+![Tag Version](https://img.shields.io/github/tag/priestjim/chef-jemalloc.svg) [![Cookbook Version](https://img.shields.io/cookbook/v/jemalloc.svg)](https://supermarket.chef.io/cookbooks/jemalloc) [![Build Status](https://travis-ci.org/priestjim/chef-jemalloc.svg?branch=master)](https://travis-ci.org/priestjim/chef-jemalloc) [![GitHub issues](https://img.shields.io/github/issues/priestjim/chef-jemalloc.svg)](https://github.com/priestjim/chef-jemalloc/issues) [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/priestjim/chef-jemalloc/master/LICENSE)
 
 This simple recipe configures, compiles and installs the memory allocation
 library `jemalloc` via source. jemalloc shines on high-request manycore
 threaded applications and is a cheap upgrade if your workloads happen to fall
 into this category.
 
-Requirements
-============
+## Requirements
 
-Platform
---------
+### Platform
 
-The following platforms are supported and tested using Vagrant:
+The following platforms are supported and tested using kitchen:
 
 * Ubuntu 12.04, 12.10
-* CentOS 6
+* CentOS 7
 
 Other Debian and RHEL family distributions are assumed to work.
 
-Chef Server
------------
+### Chef Server
 
 The cookbook converges best on Chef installations >= 10.16.2
 
-Attributes
-==========
+## Attributes
 
 The following attributes are available on this cookbook:
 
