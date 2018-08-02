@@ -21,4 +21,5 @@ Berksfile.lock
 .rake_test_cache
 .vagrant
 .idea
+.kitchen
 metadata.json

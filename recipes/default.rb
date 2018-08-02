@@ -19,11 +19,14 @@
 
 include_recipe 'build-essential'
 
+package 'bzip2' # For archive extraction
+
+tmp = Chef::Config['file_cache_path'] || '/tmp'
 jem_filename = ::File.basename(node['jemalloc']['url'])
-jem_path = "#{Chef::Config['file_cache_path'] || '/tmp'}/jemalloc-#{node['jemalloc']['version']}"
+jem_path = "#{tmp}/jemalloc-#{node['jemalloc']['version']}"
 jem_libdir = (platform_family?('rhel') && node['kernel']['machine'].eql?('x86_64')) ? '/usr/lib64' : '/usr/lib'
 
-remote_file "#{Chef::Config['file_cache_path'] || '/tmp'}/#{jem_filename}" do
+remote_file "#{tmp}/#{jem_filename}" do
   owner 'root'
   group 'root'
   mode 00644
@@ -34,8 +37,8 @@ end
 
 execute 'extract-jemalloc' do
   user 'root'
-  cwd(Chef::Config['file_cache_path'] || '/tmp')
-  command "tar xjf #{jem_filename}"
+  cwd(tmp)
+  command "tar xjf #{tmp}/#{jem_filename}"
   not_if { ::File.directory?(jem_path)}
 end
 

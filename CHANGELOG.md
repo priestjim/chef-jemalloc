@@ -1,3 +1,9 @@
+## 0.1.7:
+
+* Add kitchen support
+* Add travis build support
+* Fix bzip archive support
+
 ## 0.1.6:
 
 * Remove the `munmap` option as jemalloc 5 does not support it anymore
